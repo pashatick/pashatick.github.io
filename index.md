@@ -133,6 +133,207 @@
 ### **3.2.2. UC редактирование данных** <a  name="3.2.2.UCредактированиеданных"></a>
 ### **3.2.3. UC Удаление животного из системы** <a  name="3.2.3.UCУдалениеживотногоизсистемы"></a>
 ### **4. Модель базы данных** <a  name="4.Модельбазыданных"></a>
+**Краткое описание**
+
+Модель построена при помощи инструментов сервиса SmartMarket Stidio в редакторе DataSpace. 
+
+Модель представлена двумя агрегатами: 
+
+- DistSystem 
+  - DistSystem(базовый)
+  - Customer 
+- ControlSystem связаных
+  - ControlSystem
+  - Staff
+  - Valier
+  - AnimalsProp
+Так же содержит семь нумерованных списков:
+- SPECIES
+- SUBSPECIES
+- GENDERKIND
+- STATUSLIST
+- VALIESRTYPE
+- OPERATIONLIST
+- DISTPOINLIST
+
+XML образ:
+`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model model-name="ds_______285d75f6_8a00_4245_ad35_51a4c9c" version="0.0.2">
+  <layout>
+    <model/>
+    <enums>
+      <enum name="SubSpecies">
+        <value name="SAVAN" x="-82" y="-214"/>
+        <value name="FOREST" x="-78" y="-159"/>
+        <value name="DWARF_OF_CYPRUS" x="-78" y="-99"/>
+        <value name="DWARF_OF_SICILIAN" x="-78" y="-39"/>
+        <value name="ASIAN" x="-73" y="20"/>
+      </enum>
+      <enum name="GenderKind">
+        <value name="MALE" x="-221" y="184"/>
+        <value name="FEMALE" x="-222" y="241"/>
+      </enum>
+      <enum name="VALIERSTYPE">
+        <value name="OPEN" x="-2210" y="-10"/>
+        <value name="CLOSED" x="-2230" y="71"/>
+      </enum>
+      <enum name="OPERATIONSLIST">
+        <value name="RECEIVING" x="-2551" y="-665"/>
+        <value name="REFUND" x="-2535" y="-613"/>
+      </enum>
+      <enum name="DpointList">
+        <value name="POINT2" x="-2457" y="-991"/>
+        <value name="POINT1" x="-2457" y="-1051"/>
+        <value name="POINT3" x="-2457" y="-931"/>
+        <value name="MAIN" x="-2456" y="-1115"/>
+      </enum>
+      <enum name="StatusList">
+        <value name="FREE" x="-2086" y="-309"/>
+        <value name="SOLD" x="-2089" y="-376"/>
+        <value name="RECERVED" x="-2086" y="-447"/>
+        <value name="FREE" x="-2086" y="-369"/>
+      </enum>
+      <enum name="Species">
+        <value name="AFRICAN" x="-514" y="-566"/>
+        <value name="INDIAN" x="-550" y="-476"/>
+      </enum>
+    </enums>
+    <classes>
+      <class name="AnimalsProp">
+        <property name="imageLink" x="-593" y="358"/>
+        <property name="detachment" x="-593" y="-62"/>
+        <property name="weigth" x="-593" y="118"/>
+        <property name="tronkLength" x="-593" y="178"/>
+        <property name="gender" x="-593" y="238"/>
+        <property name="age" x="-593" y="298"/>
+        <property name="species" x="-593" y="-2"/>
+        <property name="subSpecies" x="-593" y="58"/>
+      </class>
+      <class name="Valier">
+        <property name="serialNum" x="-1471" y="93"/>
+        <property name="typeOfvalier" x="-1471" y="-95"/>
+        <property name="square" x="-1475" y="33"/>
+        <property name="countNumber" x="-1475" y="-27"/>
+      </class>
+      <class name="DistSystem">
+        <property name="customer" x="-1840" y="-1134"/>
+        <property name="operationType" x="-1836" y="-952"/>
+        <property name="status" x="-1835" y="-889"/>
+        <property name="custDate" x="-1840" y="-1074"/>
+        <property name="distPoint" x="-1838" y="-1012"/>
+        <reference name="animal" x="-1657" y="-819"/>
+      </class>
+      <class name="Customer">
+        <property name="name" x="-1274" y="-1316"/>
+        <property name="country" x="-1274" y="-1256"/>
+        <property name="address" x="-1274" y="-1136"/>
+        <property name="phone" x="-1274" y="-1076"/>
+        <property name="email" x="-1274" y="-1016"/>
+        <property name="city" x="-1274" y="-1196"/>
+      </class>
+      <class name="AnimalsControl">
+        <property name="expDate" x="-1040" y="110"/>
+        <property name="name" x="-1040" y="-70"/>
+        <property name="valier" x="-1040" y="-10"/>
+        <property name="staff" x="-1040" y="50"/>
+        <property name="distStatus" x="-1040" y="170"/>
+        <property name="valierNum1" x="-1043" y="238"/>
+      </class>
+      <class name="Staff">
+        <property name="vacancy" x="-1449" y="362"/>
+        <property name="lastName" x="-1449" y="302"/>
+        <property name="firstName" x="-1462" y="242"/>
+        <property name="petCount" x="-1449" y="422"/>
+      </class>
+    </classes>
+  </layout>
+  <enum name="SubSpecies">
+    <value name="SAVAN"/>
+    <value name="FOREST"/>
+    <value name="DWARF_OF_CYPRUS"/>
+    <value name="DWARF_OF_SICILIAN"/>
+    <value name="ASIAN"/>
+  </enum>
+  <enum name="GenderKind">
+    <value name="MALE"/>
+    <value name="FEMALE"/>
+  </enum>
+  <enum name="VALIERSTYPE">
+    <value name="OPEN"/>
+    <value name="CLOSED"/>
+  </enum>
+  <enum name="OPERATIONSLIST">
+    <value name="RECEIVING" label="ПОЛУЧЕНИЕ ЗАКАЗА"/>
+    <value name="REFUND" label="возврат"/>
+  </enum>
+  <enum name="DpointList">
+    <value name="POINT2"/>
+    <value name="POINT1"/>
+    <value name="POINT3"/>
+    <value name="MAIN"/>
+  </enum>
+  <enum name="StatusList" label="Список возможных состояний позиции">
+    <value name="FREE"/>
+    <value name="SOLD" label="ПРОДАН"/>
+    <value name="RECERVED" label="ЗАБРОНИРОВАН ПОКУПАТЕЛЕМ"/>
+  </enum>
+  <enum name="Species">
+    <value name="AFRICAN"/>
+    <value name="INDIAN"/>
+  </enum>
+  <class name="AnimalsProp" strategy="SINGLE_TABLE" is-abstract="false" embeddable="false">
+    <property name="imageLink" type="STRING" label="сслка на фото животного" length="254"/>
+    <property name="detachment" type="AnimalsControl" label="отряд" parent="true" mandatory="true"/>
+    <property name="weigth" type="FLOAT" label="вес животного" mandatory="true"/>
+    <property name="tronkLength" type="INTEGER" label="длина хобота в см" mandatory="true"/>
+    <property name="gender" type="GenderKind" label="пол животного" mandatory="true"/>
+    <property name="age" type="SHORT" label="возраст животного"/>
+    <property name="species" type="Species" label="вид животного" mandatory="true"/>
+    <property name="subSpecies" type="SubSpecies" label="одвид животного"/>
+  </class>
+  <class name="Valier" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="serialNum" type="AnimalsControl" label="нмер вальера" parent="true" mandatory="true"/>
+    <property name="typeOfvalier" type="VALIERSTYPE" label="тип вальера" parent="false"/>
+    <property name="square" type="FLOAT" label="площадь вальера"/>
+    <property name="countNumber" type="SHORT" label="номер вальера" mandatory="true" default-value="0"/>
+  </class>
+  <class name="DistSystem" label="Система раздачи" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="customer" type="Customer" label="заказчик" mandatory="true" mappedBy="name"/>
+    <property name="operationType" type="OPERATIONSLIST" mandatory="true"/>
+    <property name="status" type="StatusList" label="стутс жтвотного (свободен/зарезервирован/продан))" mandatory="true" default-value="FREE"/>
+    <property name="custDate" type="LOCALDATETIME" length="3" mandatory="true"/>
+    <property name="distPoint" type="DpointList" label="пункт выдачи" parent="false" mandatory="true" default-value="MAIN"/>
+    <reference name="animal" type="AnimalsControl" collection="SET"/>
+  </class>
+  <class name="Customer" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="name" type="DistSystem" parent="true" mandatory="true"/>
+    <property name="country" type="STRING" parent="false" length="254" mandatory="true"/>
+    <property name="address" type="STRING" length="254"/>
+    <property name="phone" type="STRING" length="254"/>
+    <property name="email" type="STRING" length="254"/>
+    <property name="city" type="STRING" length="254"/>
+  </class>
+  <class name="AnimalsControl" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="expDate" type="LOCALDATE" label="да иезменения записи" mandatory="true"/>
+    <property name="name" type="AnimalsProp" label="имя животного" mandatory="true" mappedBy="detachment"/>
+    <property name="valier" type="Valier" label="номер вальера" mandatory="true" mappedBy="serialNum"/>
+    <property name="staff" type="Staff" label="номе сотрудника обслуживания" mappedBy="firstName"/>
+    <property name="distStatus" type="BOOLEAN" label="Готовность к выдаче" mandatory="true"/>
+    <property name="valierNum1" type="INTEGER"/>
+  </class>
+  <class name="Staff" strategy="JOINED" is-abstract="false" embeddable="false">
+    <property name="vacancy" type="STRING" label="наименование вакансии" length="254" mandatory="true"/>
+    <property name="lastName" type="STRING" label="Фамилия" length="254" mandatory="true"/>
+    <property name="firstName" type="AnimalsControl" label="имя сотрудника" parent="true" mandatory="true"/>
+    <property name="petCount" type="SHORT" label="количество подопечных животных" parent="false" default-value="0"/>
+  </class>
+</model>`
+![](/bdSchemas/21102906.png)
+
+My SQL ER-diagram
+
+![My SQL ER-diagram](/bdSchemas/21102903.png)
+
 ### **5. API системы** <a  name="5.APIсистемы"></a>
 ### **6. UX/UI** <a  name="6.UX/UI"></a>
 ### **7. Архитектура проекта** <a  name="7.Архитектурапроекта"></a>
