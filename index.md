@@ -131,7 +131,7 @@
 |**Краткое описание**| Регистрация пользователя в системе раздачи слонов|
 |**Предварительные условия**|Клиент зашел в веб приложение|
 |**Сыылкана API**|[openAPI](https://app.swaggerhub.com/apis/pashatick/elephantAPI/1.0.0#/)|
-|**Пример UI**|![Ui](/ui/uc.png)|
+|**Пример UI**|![WellcomePage](/ui/21102993.png)<br>![RegPage1](/ui/21102978.png)<br>![RegPage1](/ui/21102981.png)|
 
 
 ![UMLUC](/uml/createAcc.png)
