@@ -157,7 +157,8 @@
 - DISTPOINLIST
 
 XML образ:
-```<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model model-name="ds_______285d75f6_8a00_4245_ad35_51a4c9c" version="0.0.2">
   <layout>
     <model/>
@@ -327,7 +328,7 @@ XML образ:
     <property name="firstName" type="AnimalsControl" label="имя сотрудника" parent="true" mandatory="true"/>
     <property name="petCount" type="SHORT" label="количество подопечных животных" parent="false" default-value="0"/>
   </class>
-</model>```
+</model>`>
 ![](/bdSchemas/21102906.png)
 
 My SQL ER-diagram
