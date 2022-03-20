@@ -430,6 +430,7 @@ My SQL ER-diagram
   ##### Краткое описание API
   Cсылка [OpenAPI swagger](https://app.swaggerhub.com/apis/pashatick/elephantAPI/1.0.0)
   
+  
   |**API method**|**Description**|
   |--|--|
   |POST/animal|добавить параметрическую информацию о животном в систему|
