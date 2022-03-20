@@ -599,6 +599,7 @@ My SQL ER-diagram
 
 ### **5. API системы** <a  name="5.APIсистемы"></a>
   ##### Краткое описание API
+  Cсылка [OpenAPI swagger](https://app.swaggerhub.com/apis/pashatick/elephantAPI/1.0.0)
   |**API method**|**Description**|
   |--|--|
   |POST/animal|добавить параметрическую информацию о животном в систему|
@@ -613,7 +614,7 @@ My SQL ER-diagram
   |POST/refundAnimal|Метод возврата животных согласно условиям (дата и вес)|
   |POST/Customer|Регистрация клинта фермы в системе|
   |GET/myAnimals/{customerId}|Получение всех животных приобретенных клиентом|
-  
+
 ### **6. UX/UI** <a  name="6.UX/UI"></a>
 Примеры макетов экранных форм представлены в UCs, Более подробно можно посмотреть [тут](https://github.com/pashatick/pashatick.github.io/tree/main/ui)
 ### **7. Архитектура проекта** <a  name="7.Архитектурапроекта"></a>
