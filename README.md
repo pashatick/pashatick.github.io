@@ -448,8 +448,11 @@ My SQL ER-diagram
 ![My SQL ER-diagram](/bdSchemas/21102903.png)
 
 ### **5. API системы** <a  name="5.APIсистемы"></a>
+
   ##### Краткое описание API
-  Cсылка [OpenAPI swagger](https://app.swaggerhub.com/apis/pashatick/elephantAPI/1.0.0)
+
+
+Cсылка [OpenAPI swagger](https://app.swaggerhub.com/apis/pashatick/elephantAPI/1.0.0)
   
   
   |**API method**|**Description**|
