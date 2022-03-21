@@ -3,7 +3,7 @@
 
 |**Key**|EL|                                               
 | :-: | :- |
-|**Name**|Elephant|
+|**Name**|ElephantFarm|
 |**Сreator**|Гобелков П.В. [резюме](/docs/prof.pdf)|
 |**Created by**|61d2ca349ee70a00684f364a (мар. 19, 2022)|
 
