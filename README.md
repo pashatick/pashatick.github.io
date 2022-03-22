@@ -6,6 +6,8 @@
 |**Name**|ElephantFarm|
 |**Сreator**|Гобелков П.В. [резюме](/docs/prof.pdf)|
 |**Created by**|61d2ca349ee70a00684f364a (мар. 19, 2022)|
+|**Doc. Status**|<span style="color:Blue">**IN PROGRESS**</span>|
+|**Version**|2.2.0|
 
 ![](/docs/pngwing.com.png)
 			 
@@ -203,8 +205,10 @@ My SQL ER-diagram
  ![](/uml/us1.png)
  
 
- Sequence diagram
+ **Действя покупателя и вызываемые методы**
+ 
   <br>
+  
  ![](/uml/cust_proc.png)
 
 ### **UC 3.1.1 UC Регистрация пользователя** <a  name="UC3.1.1Регистрацияпользователя"></a>
@@ -360,7 +364,8 @@ My SQL ER-diagram
 
 ![](/uml/us2.png)
 
-Sequence diagram
+**Послдеовательность действий сотрудника фермы и вызываемые методы**
+
 <br>
 
 ![](/uml/admons_proc.png)
