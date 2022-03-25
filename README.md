@@ -4,7 +4,7 @@
 |**Key**|EL|                                               
 | :-: | :- |
 |**Name**|ElephantFarm|
-|**Сreator**|Гобелков П.В. [резюме](/docs/prof.pdf)|
+|**Сreator**|Гобелков П.В. [резюме](/docs/res.pdf)|
 |**Created by**|61d2ca349ee70a00684f364a (мар. 19, 2022)|
 |**Doc. Status**|<span style="color:Blue">**IN PROGRESS**</span>|
 |**Version**|2.2.0|
